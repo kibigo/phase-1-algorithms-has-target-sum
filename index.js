@@ -1,17 +1,32 @@
 function hasTargetSum(array, target) {
-  // Write your algorithm here
+  const arrayDiff = {};
+
+  for (let i = 0; i<array.length; i++){
+    const diff = target - array[i];
+
+    if(arrayDiff[diff]){
+      return [array[i], diff];
+    }
+    arrayDiff[array[i]] = true;
+  }
+  return null;
 }
 
 /* 
-  Write the Big O time complexity of your function here
+  iterate throught the array, take each number minus the target
+  find two numbers that when subracted from target can add up to 20
 */
 
 /* 
-  Add your pseudocode here
+  get an empty array 
+  iterate over each item in array
+  subtract each number in the array from the target number
+  if two numbers are found, the iteration stops
 */
 
 /*
-  Add written explanation of your solution here
+  get the difference between the numbers in array and the target number
+
 */
 
 // You can run `node index.js` to view these console logs
