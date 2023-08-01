@@ -7,6 +7,7 @@ function hasTargetSum(array, target) {
     if(arrayDiff[diff]){
       return [array[i], diff];
     }
+    
     arrayDiff[array[i]] = true;
   }
   return null;
